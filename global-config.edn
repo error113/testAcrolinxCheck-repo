@@ -1,0 +1,57 @@
+{
+ :guidance-profile "77be3919-da8f-4000-9fc7-c69795792d82" ;; Non-Inclusive Term checking
+ :allowed-event-types ["pull_request"] ;; ["pull_request" "push"] - To enable both events
+  
+ :allow-merges-from-default true
+ :use-skip-label true
+ :changed-files-limit 50  ;; The number of files checked in a PR 
+
+ :use-gh-comments true 
+ :use-gh-statuses true
+ :gh-status-when-no-check true
+ :gh-status-skip-errors false
+ :file-size-limit "5 MB"
+ :acrolinx-override-content-format "text" ;; New with v3.3.1 Expermiental Build attribute
+ :filetypes {"PROCESS" #{:no-extension    ;; New with v3.3.1 Expermiental Build attribute
+                         "test"
+                         "acrolinx"
+                         "code-extension-1"
+                         "code-extension-2"
+			 "jsonnet" 
+			 "libsonnet" 
+			 "gradle" 
+			 "sql" 
+			 "edn" 
+			 "clj" 
+			 "py" 
+			 "yml" 
+			 "yaml" 
+			 "sh" 
+			 "properties"
+                        }
+            }
+
+ :targets
+  {:counts {
+	                ;:spelling 0
+			;:grammar 10
+			;:style 10
+			;:readability 10
+			;:informality 10
+			;:terminology_valid 10
+			;:terminology_deprecated 10
+			;:terminology_admitted 10
+			;:total 2 ; absolute flag count, it should not be used in convination with the other possible categories.
+			}
+   :scores {
+			:min-score 70
+			;:spelling 80
+			;:grammar 70
+			;:style 80
+			;:readability 80
+			;:informality 80
+			;:terminology 80
+			:qualityscore 90
+			}
+	}
+}
