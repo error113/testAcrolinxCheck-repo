@@ -1,5 +1,5 @@
 {
- :guidance-profile "77be3919-da8f-4000-9fc7-c69795792d82" ;; Non-Inclusive Term checking
+ :guidance-profile "77be3919-da8f-4000-9fc7-c69795792d82" ;; (Source Code Inclusive Language)
  :allowed-event-types ["pull_request"] ;; ["pull_request" "push"] - To enable both events
   
  :allow-merges-from-default true
